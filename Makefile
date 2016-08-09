@@ -12,7 +12,7 @@ OBJECTS = $(SOURCES:.f03=.o)
 
 
 exec: $(MAIN).f03 $(OBJECTS)
-	$(FC) $(FFLAGS) -o $(MAIN) $^
+	$(FC) -o $(MAIN) $^ $(FFLAGS)
 
 ctrl_mod.o: ncutils_mod.o
 files_mod.o: ncutils_mod.o ctrl_mod.o dem_mod.o
